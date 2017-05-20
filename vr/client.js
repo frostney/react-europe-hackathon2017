@@ -3,9 +3,12 @@
 // If you want to modify your application, start in "index.vr.js"
 
 // Auto-generated content.
-import {VRInstance} from 'react-vr-web';
+import {VRInstance, addCustomizedVideoPlayer} from 'react-vr-web';
+import YoutubeVideoPlayer from './YoutubeVideoPlayer';
 
 function init(bundle, parent, options) {
+  addCustomizedVideoPlayer(YoutubeVideoPlayer);
+
   const vr = new VRInstance(bundle, 'Hackathon', parent, {
     // Add custom options here
     ...options,
