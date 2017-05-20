@@ -7,9 +7,13 @@ import {
   Text,
   View,
   Animated,
-  Easing
+  Easing,
+  VrButton,
 } from "react-vr";
-import { fetchEvents } from "./src/fetchEvents";
+
+import fetchEvents from './src/fetchEvents';
+import LivestreamVideo from './src/LivestreamVideo';
+import SpeakerInfo from './src/SpeakerInfo';
 
 export default class Hackathon extends React.Component {
   state = {
@@ -33,6 +37,9 @@ export default class Hackathon extends React.Component {
     return (
       <View>
         <Pano source={asset("chess-world.jpg")}>
+          <VrButton
+            style={{width: 0.7, backgroundColor: 'red', height: 0.2, translate: [-1, -2, -3]}}
+            onClick={()=>this._onViewClicked()} />
           {this.state.events[0] &&
             this.state.events[0].schedule.map((s, i) => (
               <View key={i}>

@@ -1,4 +1,4 @@
-export function fetchEvents() {
+export default function fetchEvents() {
   return fetch("https://www.react-europe.org/gql", {
     method: "post",
     headers: {
