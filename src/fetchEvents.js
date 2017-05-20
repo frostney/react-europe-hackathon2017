@@ -9,7 +9,9 @@ export function fetchEvents() {
         events(slug: "reacteurope-2017") {
           schedule {
             title
-            type
+            speakers {
+              avatarUrl
+            }
           }
         }
       }`
